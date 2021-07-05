@@ -8,7 +8,6 @@ def findFactors(num):
             factors.append(i)
     return factors[1:]
 
-
 studentDict = {}
 
 with open('names.txt','r') as reader:
@@ -19,6 +18,14 @@ for i in range(len(listOfStudents)):
     hashed = (crypt.md5(listOfStudents[i].encode())).hexdigest()
     studentDict[hashed]=listOfStudents[i]
 
+convinientFactors = findFactors(len(studentDict))
+if(convinientFactors == []):
+    plusOne = findFactors(len(studentDict)+1)
+    print("Plus One factors: ",plusOne)
+    minusOne = findFactors(len(studentDict)-1)
+    print("Plus One factors: ",minusOne)
+
+print("Nice Group Sizes: ",convinientFactors)
 
 for hash,student in studentDict.items():
-    print(hash, student)
+    print(student)
