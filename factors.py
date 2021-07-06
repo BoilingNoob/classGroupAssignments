@@ -6,5 +6,6 @@ def findFactors(num):
     
     return factors[1:]
 
-print(15,findFactors(15))
-print(12345678,findFactors(12345678))
+print(31,findFactors(31))
+
+print([] == findFactors(31))
