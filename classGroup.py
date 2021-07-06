@@ -27,11 +27,19 @@ for i in range(len(listOfStudents)):
 convinientFactors = findFactors(len(studentDict))
 if(convinientFactors == []):
     plusOne = findFactors(len(studentDict)+1)
-    print("Plus One factors: ",plusOne)
+    print(" Plus One factors: ",plusOne)
     minusOne = findFactors(len(studentDict)-1)
-    print("Plus One factors: ",minusOne)
+    print("Minus One factors: ",minusOne)
+    plusTwo = findFactors(len(studentDict)+2)
+    print(" Plus Two factors: ",plusTwo)
+    minusTwo = findFactors(len(studentDict)-2)
+    print("Minus Two factors: ",minusTwo)
 
-print("Nice Group Sizes: ",convinientFactors)
 
-for hash,student in studentDict.items():
-    print(student)
+
+print(" Nice Group Sizes: ",convinientFactors)
+
+
+
+#for hash,student in studentDict.items():
+#    print(student)
