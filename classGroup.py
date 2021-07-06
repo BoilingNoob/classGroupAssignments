@@ -1,5 +1,6 @@
 from os import replace
 import hashlib as crypt
+import math
 
 def findFactors(num):
     factors = []
