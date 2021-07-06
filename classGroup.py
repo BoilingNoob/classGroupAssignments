@@ -8,6 +8,11 @@ def findFactors(num):
         if(num % i == 0):
             factors.append(i)
     return factors[1:]
+def determinePossibleOrganizations(numberOfGroups,NumberOfObjects):
+    #m = numberOfGroups       n = NumberOfObjects
+    waysToAssort = math.factorial(numberOfGroups * NumberOfObjects) 
+    waysToAssort /= (math.pow(math.factorial(NumberOfObjects),numberOfGroups) * math.factorial(numberOfGroups))
+    return waysToAssort
 
 studentDict = {}
 
