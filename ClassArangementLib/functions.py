@@ -36,6 +36,10 @@ def genList(list,studentList):
 def getStudentList(textFile):
     with open(textFile,'r') as reader:
         listOfStudents = reader.readlines()
+
+    for i in range(len(listOfStudents)):
+        listOfStudents[i] = listOfStudents[i].replace('\n','')
+
     return listOfStudents
 
 
