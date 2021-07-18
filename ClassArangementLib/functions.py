@@ -44,7 +44,7 @@ def getStudentList(textFile):
 
     return listOfStudents
 
-def generateGroupRawList(classList):
+def generateGroupRawListRandom(classList):
     groupList = []
     classListRandomized = []
     classListMutable = classList
