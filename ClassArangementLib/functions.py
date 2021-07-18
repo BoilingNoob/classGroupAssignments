@@ -1,5 +1,7 @@
 import hashlib as crypt
 import math
+import random as rand
+from os import replace
 
 def findFactors(num):
     factors = []
@@ -42,6 +44,16 @@ def getStudentList(textFile):
 
     return listOfStudents
 
+def generateGroupRawList(classList):
+    groupList = []
+    classListRandomized = []
+    classListMutable = classList
+    rand.seed()
+    for i in range(0,len(classList)):
+        randInt = rand.randrange(0,len(classListMutable))
+        groupList.append(classListMutable.pop(randInt))
+    
+    return groupList
 
 class studentGroupDay:
     studentDict = {}
