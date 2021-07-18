@@ -33,6 +33,11 @@ def genList(list,studentList):
         list[i] = studentList[list[i]]
     return list
 
+def getStudentList(textFile):
+    with open(textFile,'r') as reader:
+        listOfStudents = reader.readlines()
+    return listOfStudents
+
 
 class studentGroupDay:
     studentDict = {}
