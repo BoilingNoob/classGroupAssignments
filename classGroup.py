@@ -6,8 +6,8 @@ from ClassArangementLib import functions as classFuncs
 
 studentDict = {}
 
-with open('names.txt','r') as reader:
-    listOfStudents = reader.readlines()
+listOfStudents = classFuncs.getStudentList('names.txt')
+
 
 for i in range(len(listOfStudents)):
     listOfStudents[i] = listOfStudents[i].replace('\n','')
