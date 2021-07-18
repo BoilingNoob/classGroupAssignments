@@ -8,7 +8,7 @@ def calc2JaccardVal(classItA,classItB):
     jaccardIndicies = []
     for groupA in range(0,len(classItA)):
         for groupB in range(0,len(classItB)):
-            jaccardIndicies.append(classFuncs.calcJaccard(groupA,groupB))
+            jaccardIndicies.append(classFuncs.calcJaccard(classItA,classItB))
 
     return jaccardIndicies
 
