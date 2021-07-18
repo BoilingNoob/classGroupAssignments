@@ -14,6 +14,25 @@ def determinePossibleOrganizations(numberOfGroups,NumberOfObjects):
     waysToAssort /= (math.pow(math.factorial(NumberOfObjects),numberOfGroups) * math.factorial(numberOfGroups))
     return waysToAssort
 
+def calcJaccard(listA,listB):
+    similarities = 0
+    totalElements = 0
+    mixedList = listA + listB
+    uniqueSet = set(mixedList)
+
+    for item in uniqueSet:
+        if(item in listA and item in listB):
+            similarities+=1
+    
+    totalElements = len(uniqueSet)
+
+    return (similarities/totalElements) *100
+
+def genList(list,studentList):
+    for i in range(0,len(list)):
+        list[i] = studentList[list[i]]
+    return list
+
 
 class studentGroupDay:
     studentDict = {}
