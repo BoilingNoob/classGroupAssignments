@@ -1,5 +1,6 @@
 #Jaccard Index = (the number in both sets) / (the number in either set) * 100
 #will go O((n+1) /2) as each group needs to be measure against eachother
+#source https://www.statisticshowto.com/jaccard-index/
 from os import replace
 import hashlib as crypt
 import math
